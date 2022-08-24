@@ -1,0 +1,2226 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+interface AbstractBaseEntity {
+  "생성시각"
+  createdAt: DateTime!
+  "생성자"
+  createdUserId: Int!
+  "삭제여부"
+  deleted: Boolean!
+  "삭제시각"
+  deletedAt: DateTime
+  "아이디"
+  id: ID!
+  "수정시각"
+  updatedAt: DateTime!
+  "수정자"
+  updatedUserId: Int!
+}
+
+type DeleteManyResponse {
+  "The number of records deleted."
+  deletedCount: Int!
+}
+
+type DestinationInterface implements AbstractBaseEntity {
+  "생성시각"
+  createdAt: DateTime!
+  "생성자"
+  createdUserId: Int!
+  "삭제여부"
+  deleted: Boolean!
+  "삭제시각"
+  deletedAt: DateTime
+  "destination_system 식별자"
+  destinationSystemId: Int!
+  "http header 정보"
+  header: String
+  "아이디"
+  id: ID!
+  "destination interface 명"
+  interfaceName: String!
+  "메모"
+  memo: String
+  "http method 정보"
+  method: String
+  "parameter 혹은 parsing 을 위해 사용할 옵셔널한 데이터, JSON 형태, ex) {boardId:2423746910}"
+  optionData: String
+  "데이터 전송 정보"
+  payload: String
+  "Exmporter Client 의 response 에 대한 실 데이터 매핑키, null 일때는 원본 그대로 획득, ex) data.boards[0].items"
+  resultKey: String
+  "destination type db 경우 사용 쿼리"
+  sql: String
+  "수정시각"
+  updatedAt: DateTime!
+  "수정자"
+  updatedUserId: Int!
+  "uri 주소"
+  uri: String
+}
+
+type DestinationInterfaceAggregateGroupBy {
+  createdAt: DateTime
+  createdUserId: Int
+  deleted: Boolean
+  destinationSystemId: Int
+  header: String
+  id: ID
+  interfaceName: String
+  memo: String
+  method: String
+  optionData: String
+  payload: String
+  resultKey: String
+  sql: String
+  updatedAt: DateTime
+  updatedUserId: Int
+  uri: String
+}
+
+type DestinationInterfaceAvgAggregate {
+  createdUserId: Float
+  destinationSystemId: Float
+  id: Float
+  updatedUserId: Float
+}
+
+type DestinationInterfaceConnection {
+  "Array of nodes."
+  nodes: [DestinationInterface!]!
+  "Paging information"
+  pageInfo: OffsetPageInfo!
+  "Fetch total count of records"
+  totalCount: Int!
+}
+
+type DestinationInterfaceCountAggregate {
+  createdAt: Int
+  createdUserId: Int
+  deleted: Int
+  destinationSystemId: Int
+  header: Int
+  id: Int
+  interfaceName: Int
+  memo: Int
+  method: Int
+  optionData: Int
+  payload: Int
+  resultKey: Int
+  sql: Int
+  updatedAt: Int
+  updatedUserId: Int
+  uri: Int
+}
+
+type DestinationInterfaceDeleteResponse {
+  "생성시각"
+  createdAt: DateTime
+  "생성자"
+  createdUserId: Int
+  "삭제여부"
+  deleted: Boolean
+  "삭제시각"
+  deletedAt: DateTime
+  "destination_system 식별자"
+  destinationSystemId: Int
+  "http header 정보"
+  header: String
+  "아이디"
+  id: ID
+  "destination interface 명"
+  interfaceName: String
+  "메모"
+  memo: String
+  "http method 정보"
+  method: String
+  "parameter 혹은 parsing 을 위해 사용할 옵셔널한 데이터, JSON 형태, ex) {boardId:2423746910}"
+  optionData: String
+  "데이터 전송 정보"
+  payload: String
+  "Exmporter Client 의 response 에 대한 실 데이터 매핑키, null 일때는 원본 그대로 획득, ex) data.boards[0].items"
+  resultKey: String
+  "destination type db 경우 사용 쿼리"
+  sql: String
+  "수정시각"
+  updatedAt: DateTime
+  "수정자"
+  updatedUserId: Int
+  "uri 주소"
+  uri: String
+}
+
+type DestinationInterfaceMaxAggregate {
+  createdAt: DateTime
+  createdUserId: Int
+  deleted: Boolean
+  destinationSystemId: Int
+  header: String
+  id: ID
+  interfaceName: String
+  memo: String
+  method: String
+  optionData: String
+  payload: String
+  resultKey: String
+  sql: String
+  updatedAt: DateTime
+  updatedUserId: Int
+  uri: String
+}
+
+type DestinationInterfaceMinAggregate {
+  createdAt: DateTime
+  createdUserId: Int
+  deleted: Boolean
+  destinationSystemId: Int
+  header: String
+  id: ID
+  interfaceName: String
+  memo: String
+  method: String
+  optionData: String
+  payload: String
+  resultKey: String
+  sql: String
+  updatedAt: DateTime
+  updatedUserId: Int
+  uri: String
+}
+
+type DestinationInterfaceSumAggregate {
+  createdUserId: Float
+  destinationSystemId: Float
+  id: Float
+  updatedUserId: Float
+}
+
+type DestinationMapper implements AbstractBaseEntity {
+  "생성시각"
+  createdAt: DateTime!
+  "생성자"
+  createdUserId: Int!
+  "삭제여부"
+  deleted: Boolean!
+  "삭제시각"
+  deletedAt: DateTime
+  "destination_interface 식별자"
+  destinationInterfaceId: Int!
+  "아이디"
+  id: ID!
+  "destination mapper 명"
+  mapperName: String!
+  "비고"
+  memo: String
+  "순서"
+  sort: Int!
+  "source_interface 식별자"
+  sourceInterfaceId: Int!
+  "수정시각"
+  updatedAt: DateTime!
+  "수정자"
+  updatedUserId: Int!
+}
+
+type DestinationMapperAggregateGroupBy {
+  createdAt: DateTime
+  createdUserId: Int
+  deleted: Boolean
+  destinationInterfaceId: Int
+  id: ID
+  mapperName: String
+  memo: String
+  sort: Int
+  sourceInterfaceId: Int
+  updatedAt: DateTime
+  updatedUserId: Int
+}
+
+type DestinationMapperAvgAggregate {
+  createdUserId: Float
+  destinationInterfaceId: Float
+  id: Float
+  sort: Float
+  sourceInterfaceId: Float
+  updatedUserId: Float
+}
+
+type DestinationMapperConnection {
+  "Array of nodes."
+  nodes: [DestinationMapper!]!
+  "Paging information"
+  pageInfo: OffsetPageInfo!
+  "Fetch total count of records"
+  totalCount: Int!
+}
+
+type DestinationMapperCountAggregate {
+  createdAt: Int
+  createdUserId: Int
+  deleted: Int
+  destinationInterfaceId: Int
+  id: Int
+  mapperName: Int
+  memo: Int
+  sort: Int
+  sourceInterfaceId: Int
+  updatedAt: Int
+  updatedUserId: Int
+}
+
+type DestinationMapperDeleteResponse {
+  "생성시각"
+  createdAt: DateTime
+  "생성자"
+  createdUserId: Int
+  "삭제여부"
+  deleted: Boolean
+  "삭제시각"
+  deletedAt: DateTime
+  "destination_interface 식별자"
+  destinationInterfaceId: Int
+  "아이디"
+  id: ID
+  "destination mapper 명"
+  mapperName: String
+  "비고"
+  memo: String
+  "순서"
+  sort: Int
+  "source_interface 식별자"
+  sourceInterfaceId: Int
+  "수정시각"
+  updatedAt: DateTime
+  "수정자"
+  updatedUserId: Int
+}
+
+type DestinationMapperMaxAggregate {
+  createdAt: DateTime
+  createdUserId: Int
+  deleted: Boolean
+  destinationInterfaceId: Int
+  id: ID
+  mapperName: String
+  memo: String
+  sort: Int
+  sourceInterfaceId: Int
+  updatedAt: DateTime
+  updatedUserId: Int
+}
+
+type DestinationMapperMinAggregate {
+  createdAt: DateTime
+  createdUserId: Int
+  deleted: Boolean
+  destinationInterfaceId: Int
+  id: ID
+  mapperName: String
+  memo: String
+  sort: Int
+  sourceInterfaceId: Int
+  updatedAt: DateTime
+  updatedUserId: Int
+}
+
+type DestinationMapperSumAggregate {
+  createdUserId: Float
+  destinationInterfaceId: Float
+  id: Float
+  sort: Float
+  sourceInterfaceId: Float
+  updatedUserId: Float
+}
+
+type DestinationSystem implements AbstractBaseEntity {
+  "생성시각"
+  createdAt: DateTime!
+  "생성자"
+  createdUserId: Int!
+  "삭제여부"
+  deleted: Boolean!
+  "삭제시각"
+  deletedAt: DateTime
+  "destination host"
+  host: String!
+  "아이디"
+  id: ID!
+  "비고"
+  memo: String
+  "destination port"
+  port: String!
+  "destination_system 명"
+  systemName: String!
+  "destination 연동 타입, api, db, socket"
+  type: SystemType!
+  "수정시각"
+  updatedAt: DateTime!
+  "수정자"
+  updatedUserId: Int!
+}
+
+type DestinationSystemAggregateGroupBy {
+  createdAt: DateTime
+  createdUserId: Int
+  deleted: Boolean
+  host: String
+  id: ID
+  memo: String
+  port: String
+  systemName: String
+  type: SystemType
+  updatedAt: DateTime
+  updatedUserId: Int
+}
+
+type DestinationSystemAvgAggregate {
+  createdUserId: Float
+  id: Float
+  updatedUserId: Float
+}
+
+type DestinationSystemConnection {
+  "Array of nodes."
+  nodes: [DestinationSystem!]!
+  "Paging information"
+  pageInfo: OffsetPageInfo!
+  "Fetch total count of records"
+  totalCount: Int!
+}
+
+type DestinationSystemCountAggregate {
+  createdAt: Int
+  createdUserId: Int
+  deleted: Int
+  host: Int
+  id: Int
+  memo: Int
+  port: Int
+  systemName: Int
+  type: Int
+  updatedAt: Int
+  updatedUserId: Int
+}
+
+type DestinationSystemDeleteResponse {
+  "생성시각"
+  createdAt: DateTime
+  "생성자"
+  createdUserId: Int
+  "삭제여부"
+  deleted: Boolean
+  "삭제시각"
+  deletedAt: DateTime
+  "destination host"
+  host: String
+  "아이디"
+  id: ID
+  "비고"
+  memo: String
+  "destination port"
+  port: String
+  "destination_system 명"
+  systemName: String
+  "destination 연동 타입, api, db, socket"
+  type: SystemType
+  "수정시각"
+  updatedAt: DateTime
+  "수정자"
+  updatedUserId: Int
+}
+
+type DestinationSystemMaxAggregate {
+  createdAt: DateTime
+  createdUserId: Int
+  deleted: Boolean
+  host: String
+  id: ID
+  memo: String
+  port: String
+  systemName: String
+  type: SystemType
+  updatedAt: DateTime
+  updatedUserId: Int
+}
+
+type DestinationSystemMinAggregate {
+  createdAt: DateTime
+  createdUserId: Int
+  deleted: Boolean
+  host: String
+  id: ID
+  memo: String
+  port: String
+  systemName: String
+  type: SystemType
+  updatedAt: DateTime
+  updatedUserId: Int
+}
+
+type DestinationSystemSumAggregate {
+  createdUserId: Float
+  id: Float
+  updatedUserId: Float
+}
+
+type LoginToken {
+  "로그인 토큰"
+  token: String!
+}
+
+type Mutation {
+  createOneDestinationInterface(input: CreateOneDestinationInterfaceInput!): DestinationInterface!
+  createOneDestinationMapper(input: CreateOneDestinationMapperInput!): DestinationMapper!
+  createOneDestinationSystem(input: CreateOneDestinationSystemInput!): DestinationSystem!
+  createOneScheduleTask(input: CreateOneScheduleTaskInput!): ScheduleTask!
+  createOneSourceInterface(input: CreateOneSourceInterfaceInput!): SourceInterface!
+  createOneSourceSystem(input: CreateOneSourceSystemInput!): SourceSystem!
+  createOneUser(input: CreateOneUserInput!): User!
+  deleteManyDestinationInterfaces(input: DeleteManyDestinationInterfacesInput!): DeleteManyResponse!
+  deleteManyDestinationMappers(input: DeleteManyDestinationMappersInput!): DeleteManyResponse!
+  deleteManyDestinationSystems(input: DeleteManyDestinationSystemsInput!): DeleteManyResponse!
+  deleteManySourceInterfaces(input: DeleteManySourceInterfacesInput!): DeleteManyResponse!
+  deleteManySourceSystems(input: DeleteManySourceSystemsInput!): DeleteManyResponse!
+  deleteManyUsers(input: DeleteManyUsersInput!): DeleteManyResponse!
+  deleteOneDestinationInterface(input: DeleteOneDestinationInterfaceInput!): DestinationInterfaceDeleteResponse!
+  deleteOneDestinationMapper(input: DeleteOneDestinationMapperInput!): DestinationMapperDeleteResponse!
+  deleteOneDestinationSystem(input: DeleteOneDestinationSystemInput!): DestinationSystemDeleteResponse!
+  deleteOneScheduleTask(input: DeleteOneScheduleTaskInput!): ScheduleTaskDeleteResponse!
+  deleteOneSourceInterface(input: DeleteOneSourceInterfaceInput!): SourceInterfaceDeleteResponse!
+  deleteOneSourceSystem(input: DeleteOneSourceSystemInput!): SourceSystemDeleteResponse!
+  deleteOneUser(input: DeleteOneUserInput!): UserDeleteResponse!
+  "어드민 로그인"
+  login(login: LoginInput!): LoginToken!
+  setSourceSystemOnSourceInterface(input: SetSourceSystemOnSourceInterfaceInput!): SourceInterface!
+  "유저 회원가입"
+  signup(user: SignUpInput!): LoginToken!
+  updateOneDestinationInterface(input: UpdateOneDestinationInterfaceInput!): DestinationInterface!
+  updateOneDestinationMapper(input: UpdateOneDestinationMapperInput!): DestinationMapper!
+  updateOneDestinationSystem(input: UpdateOneDestinationSystemInput!): DestinationSystem!
+  updateOneScheduleTask(input: UpdateOneScheduleTaskInput!): ScheduleTask!
+  updateOneSourceInterface(input: UpdateOneSourceInterfaceInput!): SourceInterface!
+  updateOneSourceSystem(input: UpdateOneSourceSystemInput!): SourceSystem!
+  updateOneUser(input: UpdateOneUserInput!): User!
+}
+
+type OffsetPageInfo {
+  "true if paging forward and there are more records."
+  hasNextPage: Boolean
+  "true if paging backwards and there are more records."
+  hasPreviousPage: Boolean
+}
+
+type Query {
+  destinationInterface(
+    "The id of the record to find."
+    id: ID!
+  ): DestinationInterface
+  destinationInterfaces(
+    "Specify to filter the records returned."
+    filter: DestinationInterfaceFilter = {deleted: {in: [false]}},
+    "Limit or page results."
+    paging: OffsetPaging = {limit: 10},
+    "Specify to sort results."
+    sorting: [DestinationInterfaceSort!] = []
+  ): DestinationInterfaceConnection!
+  destinationMapper(
+    "The id of the record to find."
+    id: ID!
+  ): DestinationMapper
+  destinationMappers(
+    "Specify to filter the records returned."
+    filter: DestinationMapperFilter = {deleted: {in: [false]}},
+    "Limit or page results."
+    paging: OffsetPaging = {limit: 10},
+    "Specify to sort results."
+    sorting: [DestinationMapperSort!] = []
+  ): DestinationMapperConnection!
+  destinationSystem(
+    "The id of the record to find."
+    id: ID!
+  ): DestinationSystem
+  destinationSystems(
+    "Specify to filter the records returned."
+    filter: DestinationSystemFilter = {deleted: {in: [false]}},
+    "Limit or page results."
+    paging: OffsetPaging = {limit: 10},
+    "Specify to sort results."
+    sorting: [DestinationSystemSort!] = []
+  ): DestinationSystemConnection!
+  "유저 이메일 중복 조회"
+  existsUserEmail(email: String!): Boolean!
+  "로그인된 내 정보"
+  me: User!
+  scheduleTask(
+    "The id of the record to find."
+    id: ID!
+  ): ScheduleTask
+  scheduleTasks(
+    "Specify to filter the records returned."
+    filter: ScheduleTaskFilter = {deleted: {in: [false]}},
+    "Limit or page results."
+    paging: OffsetPaging = {limit: 10},
+    "Specify to sort results."
+    sorting: [ScheduleTaskSort!] = []
+  ): ScheduleTaskConnection!
+  sourceInterface(
+    "The id of the record to find."
+    id: ID!
+  ): SourceInterface
+  sourceInterfaces(
+    "Specify to filter the records returned."
+    filter: SourceInterfaceFilter = {deleted: {in: [false]}},
+    "Limit or page results."
+    paging: OffsetPaging = {limit: 10},
+    "Specify to sort results."
+    sorting: [SourceInterfaceSort!] = []
+  ): SourceInterfaceConnection!
+  sourceSystem(
+    "The id of the record to find."
+    id: ID!
+  ): SourceSystem
+  sourceSystems(
+    "Specify to filter the records returned."
+    filter: SourceSystemFilter = {deleted: {in: [false]}},
+    "Limit or page results."
+    paging: OffsetPaging = {limit: 10},
+    "Specify to sort results."
+    sorting: [SourceSystemSort!] = []
+  ): SourceSystemConnection!
+  user(
+    "The id of the record to find."
+    id: ID!
+  ): User
+  userAggregate(
+    "Filter to find records to aggregate on"
+    filter: UserAggregateFilter
+  ): [UserAggregateResponse!]!
+  users(
+    "Specify to filter the records returned."
+    filter: UserFilter = {deleted: {in: [false]}},
+    "Limit or page results."
+    paging: OffsetPaging = {limit: 10},
+    "Specify to sort results."
+    sorting: [UserSort!] = []
+  ): UserConnection!
+}
+
+type ScheduleTask implements AbstractBaseEntity {
+  "배치주기, CRON (* * * * * *) 형태 사용, use year"
+  batchCronSchedule: String!
+  "생성시각"
+  createdAt: DateTime!
+  "생성자"
+  createdUserId: Int!
+  "삭제여부"
+  deleted: Boolean!
+  "삭제시각"
+  deletedAt: DateTime
+  "아이디"
+  id: ID!
+  "Request Payload, 작업시 필요한 데이터"
+  requestPayload: String
+  "source_interface 참조키"
+  sourceInterfaceId: Int!
+  "작업명"
+  taskName: String!
+  "수정시각"
+  updatedAt: DateTime!
+  "수정자"
+  updatedUserId: Int!
+}
+
+type ScheduleTaskAggregateGroupBy {
+  batchCronSchedule: String
+  createdAt: DateTime
+  createdUserId: Int
+  deleted: Boolean
+  id: ID
+  requestPayload: String
+  sourceInterfaceId: Int
+  taskName: String
+  updatedAt: DateTime
+  updatedUserId: Int
+}
+
+type ScheduleTaskAvgAggregate {
+  createdUserId: Float
+  id: Float
+  sourceInterfaceId: Float
+  updatedUserId: Float
+}
+
+type ScheduleTaskConnection {
+  "Array of nodes."
+  nodes: [ScheduleTask!]!
+  "Paging information"
+  pageInfo: OffsetPageInfo!
+  "Fetch total count of records"
+  totalCount: Int!
+}
+
+type ScheduleTaskCountAggregate {
+  batchCronSchedule: Int
+  createdAt: Int
+  createdUserId: Int
+  deleted: Int
+  id: Int
+  requestPayload: Int
+  sourceInterfaceId: Int
+  taskName: Int
+  updatedAt: Int
+  updatedUserId: Int
+}
+
+type ScheduleTaskDeleteResponse {
+  "배치주기, CRON (* * * * * *) 형태 사용, use year"
+  batchCronSchedule: String
+  "생성시각"
+  createdAt: DateTime
+  "생성자"
+  createdUserId: Int
+  "삭제여부"
+  deleted: Boolean
+  "삭제시각"
+  deletedAt: DateTime
+  "아이디"
+  id: ID
+  "Request Payload, 작업시 필요한 데이터"
+  requestPayload: String
+  "source_interface 참조키"
+  sourceInterfaceId: Int
+  "작업명"
+  taskName: String
+  "수정시각"
+  updatedAt: DateTime
+  "수정자"
+  updatedUserId: Int
+}
+
+type ScheduleTaskMaxAggregate {
+  batchCronSchedule: String
+  createdAt: DateTime
+  createdUserId: Int
+  deleted: Boolean
+  id: ID
+  requestPayload: String
+  sourceInterfaceId: Int
+  taskName: String
+  updatedAt: DateTime
+  updatedUserId: Int
+}
+
+type ScheduleTaskMinAggregate {
+  batchCronSchedule: String
+  createdAt: DateTime
+  createdUserId: Int
+  deleted: Boolean
+  id: ID
+  requestPayload: String
+  sourceInterfaceId: Int
+  taskName: String
+  updatedAt: DateTime
+  updatedUserId: Int
+}
+
+type ScheduleTaskSumAggregate {
+  createdUserId: Float
+  id: Float
+  sourceInterfaceId: Float
+  updatedUserId: Float
+}
+
+type SourceInterface implements AbstractBaseEntity {
+  "생성시각"
+  createdAt: DateTime!
+  "생성자"
+  createdUserId: Int!
+  "삭제여부"
+  deleted: Boolean!
+  "삭제시각"
+  deletedAt: DateTime
+  "http header 정보"
+  header: String
+  "아이디"
+  id: ID!
+  "source_interface 명"
+  interfaceName: String!
+  "비고"
+  memo: String
+  "http method 정보"
+  method: String
+  "payload 혹은 header 의 customizing 을 위한 옵셔녈 데이터, JSON"
+  optionData: String
+  "http 데이터 전송 정보"
+  payload: String
+  "dynamoDB 의 pk 에 사용할 컬럼의 키워드 리스트. 입력순으로 우선순위를 갖는다. 구분자는 콤마(,)"
+  pkItems: String
+  "importer 의 response 에 대한 실사용 데이터 매핑키. dictionary 에 대한 nested depth Key 값임. ex) data.boards[0].items"
+  resultKey: String
+  sourceSystem: SourceSystem!
+  "source_system 식별자"
+  sourceSystemId: Int!
+  "source type db 경우 쿼리"
+  sql: String
+  "수정시각"
+  updatedAt: DateTime!
+  "수정자"
+  updatedUserId: Int!
+  "uri 주소"
+  uri: String
+}
+
+type SourceInterfaceAggregateGroupBy {
+  createdAt: DateTime
+  createdUserId: Int
+  deleted: Boolean
+  header: String
+  id: ID
+  interfaceName: String
+  memo: String
+  method: String
+  optionData: String
+  payload: String
+  pkItems: String
+  resultKey: String
+  sourceSystemId: Int
+  sql: String
+  updatedAt: DateTime
+  updatedUserId: Int
+  uri: String
+}
+
+type SourceInterfaceAvgAggregate {
+  createdUserId: Float
+  id: Float
+  sourceSystemId: Float
+  updatedUserId: Float
+}
+
+type SourceInterfaceConnection {
+  "Array of nodes."
+  nodes: [SourceInterface!]!
+  "Paging information"
+  pageInfo: OffsetPageInfo!
+  "Fetch total count of records"
+  totalCount: Int!
+}
+
+type SourceInterfaceCountAggregate {
+  createdAt: Int
+  createdUserId: Int
+  deleted: Int
+  header: Int
+  id: Int
+  interfaceName: Int
+  memo: Int
+  method: Int
+  optionData: Int
+  payload: Int
+  pkItems: Int
+  resultKey: Int
+  sourceSystemId: Int
+  sql: Int
+  updatedAt: Int
+  updatedUserId: Int
+  uri: Int
+}
+
+type SourceInterfaceDeleteResponse {
+  "생성시각"
+  createdAt: DateTime
+  "생성자"
+  createdUserId: Int
+  "삭제여부"
+  deleted: Boolean
+  "삭제시각"
+  deletedAt: DateTime
+  "http header 정보"
+  header: String
+  "아이디"
+  id: ID
+  "source_interface 명"
+  interfaceName: String
+  "비고"
+  memo: String
+  "http method 정보"
+  method: String
+  "payload 혹은 header 의 customizing 을 위한 옵셔녈 데이터, JSON"
+  optionData: String
+  "http 데이터 전송 정보"
+  payload: String
+  "dynamoDB 의 pk 에 사용할 컬럼의 키워드 리스트. 입력순으로 우선순위를 갖는다. 구분자는 콤마(,)"
+  pkItems: String
+  "importer 의 response 에 대한 실사용 데이터 매핑키. dictionary 에 대한 nested depth Key 값임. ex) data.boards[0].items"
+  resultKey: String
+  "source_system 식별자"
+  sourceSystemId: Int
+  "source type db 경우 쿼리"
+  sql: String
+  "수정시각"
+  updatedAt: DateTime
+  "수정자"
+  updatedUserId: Int
+  "uri 주소"
+  uri: String
+}
+
+type SourceInterfaceMaxAggregate {
+  createdAt: DateTime
+  createdUserId: Int
+  deleted: Boolean
+  header: String
+  id: ID
+  interfaceName: String
+  memo: String
+  method: String
+  optionData: String
+  payload: String
+  pkItems: String
+  resultKey: String
+  sourceSystemId: Int
+  sql: String
+  updatedAt: DateTime
+  updatedUserId: Int
+  uri: String
+}
+
+type SourceInterfaceMinAggregate {
+  createdAt: DateTime
+  createdUserId: Int
+  deleted: Boolean
+  header: String
+  id: ID
+  interfaceName: String
+  memo: String
+  method: String
+  optionData: String
+  payload: String
+  pkItems: String
+  resultKey: String
+  sourceSystemId: Int
+  sql: String
+  updatedAt: DateTime
+  updatedUserId: Int
+  uri: String
+}
+
+type SourceInterfaceSumAggregate {
+  createdUserId: Float
+  id: Float
+  sourceSystemId: Float
+  updatedUserId: Float
+}
+
+type SourceSystem implements AbstractBaseEntity {
+  "생성시각"
+  createdAt: DateTime!
+  "생성자"
+  createdUserId: Int!
+  "삭제여부"
+  deleted: Boolean!
+  "삭제시각"
+  deletedAt: DateTime
+  "URL or IP or DOMAIN"
+  host: String!
+  "아이디"
+  id: ID!
+  "비고"
+  memo: String
+  "port"
+  port: String!
+  "source_system 명"
+  systemName: String!
+  "source 연동 타입, api, db, socket"
+  type: SystemType!
+  "수정시각"
+  updatedAt: DateTime!
+  "수정자"
+  updatedUserId: Int!
+}
+
+type SourceSystemAggregateGroupBy {
+  createdAt: DateTime
+  createdUserId: Int
+  deleted: Boolean
+  host: String
+  id: ID
+  memo: String
+  port: String
+  systemName: String
+  type: SystemType
+  updatedAt: DateTime
+  updatedUserId: Int
+}
+
+type SourceSystemAvgAggregate {
+  createdUserId: Float
+  id: Float
+  updatedUserId: Float
+}
+
+type SourceSystemConnection {
+  "Array of nodes."
+  nodes: [SourceSystem!]!
+  "Paging information"
+  pageInfo: OffsetPageInfo!
+  "Fetch total count of records"
+  totalCount: Int!
+}
+
+type SourceSystemCountAggregate {
+  createdAt: Int
+  createdUserId: Int
+  deleted: Int
+  host: Int
+  id: Int
+  memo: Int
+  port: Int
+  systemName: Int
+  type: Int
+  updatedAt: Int
+  updatedUserId: Int
+}
+
+type SourceSystemDeleteResponse {
+  "생성시각"
+  createdAt: DateTime
+  "생성자"
+  createdUserId: Int
+  "삭제여부"
+  deleted: Boolean
+  "삭제시각"
+  deletedAt: DateTime
+  "URL or IP or DOMAIN"
+  host: String
+  "아이디"
+  id: ID
+  "비고"
+  memo: String
+  "port"
+  port: String
+  "source_system 명"
+  systemName: String
+  "source 연동 타입, api, db, socket"
+  type: SystemType
+  "수정시각"
+  updatedAt: DateTime
+  "수정자"
+  updatedUserId: Int
+}
+
+type SourceSystemMaxAggregate {
+  createdAt: DateTime
+  createdUserId: Int
+  deleted: Boolean
+  host: String
+  id: ID
+  memo: String
+  port: String
+  systemName: String
+  type: SystemType
+  updatedAt: DateTime
+  updatedUserId: Int
+}
+
+type SourceSystemMinAggregate {
+  createdAt: DateTime
+  createdUserId: Int
+  deleted: Boolean
+  host: String
+  id: ID
+  memo: String
+  port: String
+  systemName: String
+  type: SystemType
+  updatedAt: DateTime
+  updatedUserId: Int
+}
+
+type SourceSystemSumAggregate {
+  createdUserId: Float
+  id: Float
+  updatedUserId: Float
+}
+
+type User implements AbstractBaseEntity {
+  "생성시각"
+  createdAt: DateTime!
+  "생성자"
+  createdUserId: Int!
+  "삭제여부"
+  deleted: Boolean!
+  "삭제시각"
+  deletedAt: DateTime
+  "이메일"
+  email: String!
+  "아이디"
+  id: ID!
+  "이름"
+  name: String!
+  "권한"
+  role: Role!
+  "수정시각"
+  updatedAt: DateTime!
+  "수정자"
+  updatedUserId: Int!
+}
+
+type UserAggregateGroupBy {
+  createdAt: DateTime
+  createdUserId: Int
+  deleted: Boolean
+  email: String
+  id: ID
+  name: String
+  role: Role
+  updatedAt: DateTime
+  updatedUserId: Int
+}
+
+type UserAggregateResponse {
+  avg: UserAvgAggregate
+  count: UserCountAggregate
+  groupBy: UserAggregateGroupBy
+  max: UserMaxAggregate
+  min: UserMinAggregate
+  sum: UserSumAggregate
+}
+
+type UserAvgAggregate {
+  createdUserId: Float
+  id: Float
+  updatedUserId: Float
+}
+
+type UserConnection {
+  "Array of nodes."
+  nodes: [User!]!
+  "Paging information"
+  pageInfo: OffsetPageInfo!
+  "Fetch total count of records"
+  totalCount: Int!
+}
+
+type UserCountAggregate {
+  createdAt: Int
+  createdUserId: Int
+  deleted: Int
+  email: Int
+  id: Int
+  name: Int
+  role: Int
+  updatedAt: Int
+  updatedUserId: Int
+}
+
+type UserDeleteResponse {
+  "생성시각"
+  createdAt: DateTime
+  "생성자"
+  createdUserId: Int
+  "삭제여부"
+  deleted: Boolean
+  "삭제시각"
+  deletedAt: DateTime
+  "이메일"
+  email: String
+  "아이디"
+  id: ID
+  "이름"
+  name: String
+  "권한"
+  role: Role
+  "수정시각"
+  updatedAt: DateTime
+  "수정자"
+  updatedUserId: Int
+}
+
+type UserMaxAggregate {
+  createdAt: DateTime
+  createdUserId: Int
+  deleted: Boolean
+  email: String
+  id: ID
+  name: String
+  role: Role
+  updatedAt: DateTime
+  updatedUserId: Int
+}
+
+type UserMinAggregate {
+  createdAt: DateTime
+  createdUserId: Int
+  deleted: Boolean
+  email: String
+  id: ID
+  name: String
+  role: Role
+  updatedAt: DateTime
+  updatedUserId: Int
+}
+
+type UserSumAggregate {
+  createdUserId: Float
+  id: Float
+  updatedUserId: Float
+}
+
+enum DestinationInterfaceSortFields {
+  createdAt
+  createdUserId
+  deleted
+  destinationSystemId
+  header
+  id
+  interfaceName
+  memo
+  method
+  optionData
+  payload
+  resultKey
+  sql
+  updatedAt
+  updatedUserId
+  uri
+}
+
+enum DestinationMapperSortFields {
+  createdAt
+  createdUserId
+  deleted
+  destinationInterfaceId
+  id
+  mapperName
+  memo
+  sort
+  sourceInterfaceId
+  updatedAt
+  updatedUserId
+}
+
+enum DestinationSystemSortFields {
+  createdAt
+  createdUserId
+  deleted
+  host
+  id
+  memo
+  port
+  systemName
+  type
+  updatedAt
+  updatedUserId
+}
+
+enum Role {
+  ADMIN
+  USER
+}
+
+enum ScheduleTaskSortFields {
+  batchCronSchedule
+  createdAt
+  createdUserId
+  deleted
+  id
+  requestPayload
+  sourceInterfaceId
+  taskName
+  updatedAt
+  updatedUserId
+}
+
+"Sort Directions"
+enum SortDirection {
+  ASC
+  DESC
+}
+
+"Sort Nulls Options"
+enum SortNulls {
+  NULLS_FIRST
+  NULLS_LAST
+}
+
+enum SourceInterfaceSortFields {
+  createdAt
+  createdUserId
+  deleted
+  header
+  id
+  interfaceName
+  memo
+  method
+  optionData
+  payload
+  pkItems
+  resultKey
+  sourceSystemId
+  sql
+  updatedAt
+  updatedUserId
+  uri
+}
+
+enum SourceSystemSortFields {
+  createdAt
+  createdUserId
+  deleted
+  host
+  id
+  memo
+  port
+  systemName
+  type
+  updatedAt
+  updatedUserId
+}
+
+"시스템 연동 타입"
+enum SystemType {
+  "api 방식"
+  API
+  "db 방식"
+  DB
+  "socket 방식"
+  SOCKET
+}
+
+enum UserSortFields {
+  createdAt
+  createdUserId
+  deleted
+  email
+  id
+  name
+  role
+  updatedAt
+  updatedUserId
+}
+
+"A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format."
+scalar DateTime
+
+input CreateDestinationInterfaceInput {
+  "destination_system 식별자"
+  destinationSystemId: Int!
+  "http header 정보"
+  header: String
+  "destination interface 명"
+  interfaceName: String!
+  "메모"
+  memo: String
+  "http method 정보"
+  method: String
+  "parameter 혹은 parsing 을 위해 사용할 옵셔널한 데이터, JSON 형태, ex) {boardId:2423746910}"
+  optionData: String
+  "데이터 전송 정보"
+  payload: String
+  "Exmporter Client 의 response 에 대한 실 데이터 매핑키, null 일때는 원본 그대로 획득, ex) data.boards[0].items"
+  resultKey: String
+  "destination type db 경우 사용 쿼리"
+  sql: String
+  "uri 주소"
+  uri: String
+}
+
+input CreateDestinationMapperInput {
+  "destination_interface 식별자"
+  destinationInterfaceId: Int!
+  "destination mapper 명"
+  mapperName: String!
+  "비고"
+  memo: String
+  "순서"
+  sort: Int!
+  "source_interface 식별자"
+  sourceInterfaceId: Int!
+}
+
+input CreateDestinationSystemInput {
+  "destination host"
+  host: String!
+  "비고"
+  memo: String
+  "destination port"
+  port: String!
+  "destination_system 명"
+  systemName: String!
+  "destination 연동 타입, api, db, socket"
+  type: SystemType!
+}
+
+input CreateOneDestinationInterfaceInput {
+  "The record to create"
+  destinationInterface: CreateDestinationInterfaceInput!
+}
+
+input CreateOneDestinationMapperInput {
+  "The record to create"
+  destinationMapper: CreateDestinationMapperInput!
+}
+
+input CreateOneDestinationSystemInput {
+  "The record to create"
+  destinationSystem: CreateDestinationSystemInput!
+}
+
+input CreateOneScheduleTaskInput {
+  "The record to create"
+  scheduleTask: CreateScheduleTaskInput!
+}
+
+input CreateOneSourceInterfaceInput {
+  "The record to create"
+  sourceInterface: CreateSourceInterfaceInput!
+}
+
+input CreateOneSourceSystemInput {
+  "The record to create"
+  sourceSystem: CreateSourceSystemInput!
+}
+
+input CreateOneUserInput {
+  "The record to create"
+  user: CreateUserInput!
+}
+
+input CreateScheduleTaskInput {
+  "배치주기, CRON (* * * * * *) 형태 사용, use year"
+  batchCronSchedule: String!
+  "Request Payload, 작업시 필요한 데이터"
+  requestPayload: String
+  "source_interface 참조키"
+  sourceInterfaceId: Int!
+  "작업명"
+  taskName: String!
+}
+
+input CreateSourceInterfaceInput {
+  "http header 정보"
+  header: String
+  "source_interface 명"
+  interfaceName: String!
+  "비고"
+  memo: String
+  "http method 정보"
+  method: String
+  "payload 혹은 header 의 customizing 을 위한 옵셔녈 데이터, JSON"
+  optionData: String
+  "http 데이터 전송 정보"
+  payload: String
+  "dynamoDB 의 pk 에 사용할 컬럼의 키워드 리스트. 입력순으로 우선순위를 갖는다. 구분자는 콤마(,)"
+  pkItems: String
+  "importer 의 response 에 대한 실사용 데이터 매핑키. dictionary 에 대한 nested depth Key 값임. ex) data.boards[0].items"
+  resultKey: String
+  "source_system 식별자"
+  sourceSystemId: Int!
+  "source type db 경우 쿼리"
+  sql: String
+  "uri 주소"
+  uri: String
+}
+
+input CreateSourceSystemInput {
+  "URL or IP or DOMAIN"
+  host: String!
+  "비고"
+  memo: String
+  "port"
+  port: String!
+  "source_system 명"
+  systemName: String!
+  "source 연동 타입, api, db, socket"
+  type: SystemType!
+}
+
+input CreateUserInput {
+  "이메일"
+  email: String!
+  "이름"
+  name: String!
+  "권한"
+  role: Role = USER
+}
+
+input DateFieldComparison {
+  between: DateFieldComparisonBetween
+  eq: DateTime
+  gt: DateTime
+  gte: DateTime
+  in: [DateTime!]
+  is: Boolean
+  isNot: Boolean
+  lt: DateTime
+  lte: DateTime
+  neq: DateTime
+  notBetween: DateFieldComparisonBetween
+  notIn: [DateTime!]
+}
+
+input DateFieldComparisonBetween {
+  lower: DateTime!
+  upper: DateTime!
+}
+
+input DeleteManyDestinationInterfacesInput {
+  "Filter to find records to delete"
+  filter: DestinationInterfaceDeleteFilter!
+}
+
+input DeleteManyDestinationMappersInput {
+  "Filter to find records to delete"
+  filter: DestinationMapperDeleteFilter!
+}
+
+input DeleteManyDestinationSystemsInput {
+  "Filter to find records to delete"
+  filter: DestinationSystemDeleteFilter!
+}
+
+input DeleteManySourceInterfacesInput {
+  "Filter to find records to delete"
+  filter: SourceInterfaceDeleteFilter!
+}
+
+input DeleteManySourceSystemsInput {
+  "Filter to find records to delete"
+  filter: SourceSystemDeleteFilter!
+}
+
+input DeleteManyUsersInput {
+  "Filter to find records to delete"
+  filter: UserDeleteFilter!
+}
+
+input DeleteOneDestinationInterfaceInput {
+  "The id of the record to delete."
+  id: ID!
+}
+
+input DeleteOneDestinationMapperInput {
+  "The id of the record to delete."
+  id: ID!
+}
+
+input DeleteOneDestinationSystemInput {
+  "The id of the record to delete."
+  id: ID!
+}
+
+input DeleteOneScheduleTaskInput {
+  "The id of the record to delete."
+  id: ID!
+}
+
+input DeleteOneSourceInterfaceInput {
+  "The id of the record to delete."
+  id: ID!
+}
+
+input DeleteOneSourceSystemInput {
+  "The id of the record to delete."
+  id: ID!
+}
+
+input DeleteOneUserInput {
+  "The id of the record to delete."
+  id: ID!
+}
+
+input DestinationInterfaceDeleteFilter {
+  and: [DestinationInterfaceDeleteFilter!]
+  createdAt: DateFieldComparison
+  createdUserId: IntFieldComparison
+  deleted: DestinationInterfaceDeletedFilterComparison
+  destinationSystemId: IntFieldComparison
+  header: StringFieldComparison
+  id: IDFilterComparison
+  interfaceName: StringFieldComparison
+  memo: StringFieldComparison
+  method: StringFieldComparison
+  optionData: StringFieldComparison
+  or: [DestinationInterfaceDeleteFilter!]
+  payload: StringFieldComparison
+  resultKey: StringFieldComparison
+  sql: StringFieldComparison
+  updatedAt: DateFieldComparison
+  updatedUserId: IntFieldComparison
+  uri: StringFieldComparison
+}
+
+input DestinationInterfaceDeletedFilterComparison {
+  in: [Boolean!]
+}
+
+input DestinationInterfaceFilter {
+  and: [DestinationInterfaceFilter!]
+  createdAt: DateFieldComparison
+  createdUserId: IntFieldComparison
+  deleted: DestinationInterfaceDeletedFilterComparison
+  destinationSystemId: IntFieldComparison
+  header: StringFieldComparison
+  id: IDFilterComparison
+  interfaceName: StringFieldComparison
+  memo: StringFieldComparison
+  method: StringFieldComparison
+  optionData: StringFieldComparison
+  or: [DestinationInterfaceFilter!]
+  payload: StringFieldComparison
+  resultKey: StringFieldComparison
+  sql: StringFieldComparison
+  updatedAt: DateFieldComparison
+  updatedUserId: IntFieldComparison
+  uri: StringFieldComparison
+}
+
+input DestinationInterfaceInput {
+  "destination_system 식별자"
+  destinationSystemId: Int!
+  "http header 정보"
+  header: String
+  "destination interface 명"
+  interfaceName: String!
+  "메모"
+  memo: String
+  "http method 정보"
+  method: String
+  "parameter 혹은 parsing 을 위해 사용할 옵셔널한 데이터, JSON 형태, ex) {boardId:2423746910}"
+  optionData: String
+  "데이터 전송 정보"
+  payload: String
+  "Exmporter Client 의 response 에 대한 실 데이터 매핑키, null 일때는 원본 그대로 획득, ex) data.boards[0].items"
+  resultKey: String
+  "destination type db 경우 사용 쿼리"
+  sql: String
+  "uri 주소"
+  uri: String
+}
+
+input DestinationInterfaceSort {
+  direction: SortDirection!
+  field: DestinationInterfaceSortFields!
+  nulls: SortNulls
+}
+
+input DestinationMapperDeleteFilter {
+  and: [DestinationMapperDeleteFilter!]
+  createdAt: DateFieldComparison
+  createdUserId: IntFieldComparison
+  deleted: DestinationMapperDeletedFilterComparison
+  destinationInterfaceId: IntFieldComparison
+  id: IDFilterComparison
+  mapperName: StringFieldComparison
+  memo: StringFieldComparison
+  or: [DestinationMapperDeleteFilter!]
+  sort: IntFieldComparison
+  sourceInterfaceId: IntFieldComparison
+  updatedAt: DateFieldComparison
+  updatedUserId: IntFieldComparison
+}
+
+input DestinationMapperDeletedFilterComparison {
+  in: [Boolean!]
+}
+
+input DestinationMapperFilter {
+  and: [DestinationMapperFilter!]
+  createdAt: DateFieldComparison
+  createdUserId: IntFieldComparison
+  deleted: DestinationMapperDeletedFilterComparison
+  destinationInterfaceId: IntFieldComparison
+  id: IDFilterComparison
+  mapperName: StringFieldComparison
+  memo: StringFieldComparison
+  or: [DestinationMapperFilter!]
+  sort: IntFieldComparison
+  sourceInterfaceId: IntFieldComparison
+  updatedAt: DateFieldComparison
+  updatedUserId: IntFieldComparison
+}
+
+input DestinationMapperInput {
+  "destination_interface 식별자"
+  destinationInterfaceId: Int!
+  "destination mapper 명"
+  mapperName: String!
+  "비고"
+  memo: String
+  "순서"
+  sort: Int!
+  "source_interface 식별자"
+  sourceInterfaceId: Int!
+}
+
+input DestinationMapperSort {
+  direction: SortDirection!
+  field: DestinationMapperSortFields!
+  nulls: SortNulls
+}
+
+input DestinationSystemDeleteFilter {
+  and: [DestinationSystemDeleteFilter!]
+  createdAt: DateFieldComparison
+  createdUserId: IntFieldComparison
+  deleted: DestinationSystemDeletedFilterComparison
+  host: StringFieldComparison
+  id: IDFilterComparison
+  memo: StringFieldComparison
+  or: [DestinationSystemDeleteFilter!]
+  port: StringFieldComparison
+  systemName: StringFieldComparison
+  type: SystemTypeFilterComparison
+  updatedAt: DateFieldComparison
+  updatedUserId: IntFieldComparison
+}
+
+input DestinationSystemDeletedFilterComparison {
+  in: [Boolean!]
+}
+
+input DestinationSystemFilter {
+  and: [DestinationSystemFilter!]
+  createdAt: DateFieldComparison
+  createdUserId: IntFieldComparison
+  deleted: DestinationSystemDeletedFilterComparison
+  host: StringFieldComparison
+  id: IDFilterComparison
+  memo: StringFieldComparison
+  or: [DestinationSystemFilter!]
+  port: StringFieldComparison
+  systemName: StringFieldComparison
+  type: SystemTypeFilterComparison
+  updatedAt: DateFieldComparison
+  updatedUserId: IntFieldComparison
+}
+
+input DestinationSystemInput {
+  "destination host"
+  host: String!
+  "비고"
+  memo: String
+  "destination port"
+  port: String!
+  "destination_system 명"
+  systemName: String!
+  "destination 연동 타입, api, db, socket"
+  type: SystemType!
+}
+
+input DestinationSystemSort {
+  direction: SortDirection!
+  field: DestinationSystemSortFields!
+  nulls: SortNulls
+}
+
+input IDFilterComparison {
+  eq: ID
+  gt: ID
+  gte: ID
+  iLike: ID
+  in: [ID!]
+  is: Boolean
+  isNot: Boolean
+  like: ID
+  lt: ID
+  lte: ID
+  neq: ID
+  notILike: ID
+  notIn: [ID!]
+  notLike: ID
+}
+
+input IntFieldComparison {
+  between: IntFieldComparisonBetween
+  eq: Int
+  gt: Int
+  gte: Int
+  in: [Int!]
+  is: Boolean
+  isNot: Boolean
+  lt: Int
+  lte: Int
+  neq: Int
+  notBetween: IntFieldComparisonBetween
+  notIn: [Int!]
+}
+
+input IntFieldComparisonBetween {
+  lower: Int!
+  upper: Int!
+}
+
+input LoginInput {
+  "이메일"
+  email: String!
+  "패스워드"
+  password: String!
+}
+
+input OffsetPaging {
+  "Limit the number of records returned"
+  limit: Int
+  "Offset to start returning records from"
+  offset: Int
+}
+
+input RoleFilterComparison {
+  eq: Role
+  gt: Role
+  gte: Role
+  iLike: Role
+  in: [Role!]
+  is: Boolean
+  isNot: Boolean
+  like: Role
+  lt: Role
+  lte: Role
+  neq: Role
+  notILike: Role
+  notIn: [Role!]
+  notLike: Role
+}
+
+input ScheduleTaskDeletedFilterComparison {
+  in: [Boolean!]
+}
+
+input ScheduleTaskFilter {
+  and: [ScheduleTaskFilter!]
+  batchCronSchedule: StringFieldComparison
+  createdAt: DateFieldComparison
+  createdUserId: IntFieldComparison
+  deleted: ScheduleTaskDeletedFilterComparison
+  id: IDFilterComparison
+  or: [ScheduleTaskFilter!]
+  requestPayload: StringFieldComparison
+  sourceInterfaceId: IntFieldComparison
+  taskName: StringFieldComparison
+  updatedAt: DateFieldComparison
+  updatedUserId: IntFieldComparison
+}
+
+input ScheduleTaskInput {
+  "배치주기, CRON (* * * * * *) 형태 사용, use year"
+  batchCronSchedule: String!
+  "Request Payload, 작업시 필요한 데이터"
+  requestPayload: String
+  "source_interface 참조키"
+  sourceInterfaceId: Int!
+  "작업명"
+  taskName: String!
+}
+
+input ScheduleTaskSort {
+  direction: SortDirection!
+  field: ScheduleTaskSortFields!
+  nulls: SortNulls
+}
+
+input SetSourceSystemOnSourceInterfaceInput {
+  "The id of the record."
+  id: ID!
+  "The id of relation."
+  relationId: ID!
+}
+
+input SignUpInput {
+  "이메일"
+  email: String!
+  "이름"
+  name: String!
+  "패스워드"
+  password: String!
+}
+
+input SourceInterfaceDeleteFilter {
+  and: [SourceInterfaceDeleteFilter!]
+  createdAt: DateFieldComparison
+  createdUserId: IntFieldComparison
+  deleted: SourceInterfaceDeletedFilterComparison
+  header: StringFieldComparison
+  id: IDFilterComparison
+  interfaceName: StringFieldComparison
+  memo: StringFieldComparison
+  method: StringFieldComparison
+  optionData: StringFieldComparison
+  or: [SourceInterfaceDeleteFilter!]
+  payload: StringFieldComparison
+  pkItems: StringFieldComparison
+  resultKey: StringFieldComparison
+  sourceSystemId: IntFieldComparison
+  sql: StringFieldComparison
+  updatedAt: DateFieldComparison
+  updatedUserId: IntFieldComparison
+  uri: StringFieldComparison
+}
+
+input SourceInterfaceDeletedFilterComparison {
+  in: [Boolean!]
+}
+
+input SourceInterfaceFilter {
+  and: [SourceInterfaceFilter!]
+  createdAt: DateFieldComparison
+  createdUserId: IntFieldComparison
+  deleted: SourceInterfaceDeletedFilterComparison
+  header: StringFieldComparison
+  id: IDFilterComparison
+  interfaceName: StringFieldComparison
+  memo: StringFieldComparison
+  method: StringFieldComparison
+  optionData: StringFieldComparison
+  or: [SourceInterfaceFilter!]
+  payload: StringFieldComparison
+  pkItems: StringFieldComparison
+  resultKey: StringFieldComparison
+  sourceSystemId: IntFieldComparison
+  sql: StringFieldComparison
+  updatedAt: DateFieldComparison
+  updatedUserId: IntFieldComparison
+  uri: StringFieldComparison
+}
+
+input SourceInterfaceInput {
+  "http header 정보"
+  header: String
+  "source_interface 명"
+  interfaceName: String!
+  "비고"
+  memo: String
+  "http method 정보"
+  method: String
+  "payload 혹은 header 의 customizing 을 위한 옵셔녈 데이터, JSON"
+  optionData: String
+  "http 데이터 전송 정보"
+  payload: String
+  "dynamoDB 의 pk 에 사용할 컬럼의 키워드 리스트. 입력순으로 우선순위를 갖는다. 구분자는 콤마(,)"
+  pkItems: String
+  "importer 의 response 에 대한 실사용 데이터 매핑키. dictionary 에 대한 nested depth Key 값임. ex) data.boards[0].items"
+  resultKey: String
+  "source_system 식별자"
+  sourceSystemId: Int!
+  "source type db 경우 쿼리"
+  sql: String
+  "uri 주소"
+  uri: String
+}
+
+input SourceInterfaceSort {
+  direction: SortDirection!
+  field: SourceInterfaceSortFields!
+  nulls: SortNulls
+}
+
+input SourceSystemDeleteFilter {
+  and: [SourceSystemDeleteFilter!]
+  createdAt: DateFieldComparison
+  createdUserId: IntFieldComparison
+  deleted: SourceSystemDeletedFilterComparison
+  host: StringFieldComparison
+  id: IDFilterComparison
+  memo: StringFieldComparison
+  or: [SourceSystemDeleteFilter!]
+  port: StringFieldComparison
+  systemName: StringFieldComparison
+  type: SystemTypeFilterComparison
+  updatedAt: DateFieldComparison
+  updatedUserId: IntFieldComparison
+}
+
+input SourceSystemDeletedFilterComparison {
+  in: [Boolean!]
+}
+
+input SourceSystemFilter {
+  and: [SourceSystemFilter!]
+  createdAt: DateFieldComparison
+  createdUserId: IntFieldComparison
+  deleted: SourceSystemDeletedFilterComparison
+  host: StringFieldComparison
+  id: IDFilterComparison
+  memo: StringFieldComparison
+  or: [SourceSystemFilter!]
+  port: StringFieldComparison
+  systemName: StringFieldComparison
+  type: SystemTypeFilterComparison
+  updatedAt: DateFieldComparison
+  updatedUserId: IntFieldComparison
+}
+
+input SourceSystemInput {
+  "URL or IP or DOMAIN"
+  host: String!
+  "비고"
+  memo: String
+  "port"
+  port: String!
+  "source_system 명"
+  systemName: String!
+  "source 연동 타입, api, db, socket"
+  type: SystemType!
+}
+
+input SourceSystemSort {
+  direction: SortDirection!
+  field: SourceSystemSortFields!
+  nulls: SortNulls
+}
+
+input StringFieldComparison {
+  eq: String
+  gt: String
+  gte: String
+  iLike: String
+  in: [String!]
+  is: Boolean
+  isNot: Boolean
+  like: String
+  lt: String
+  lte: String
+  neq: String
+  notILike: String
+  notIn: [String!]
+  notLike: String
+}
+
+input SystemTypeFilterComparison {
+  eq: SystemType
+  gt: SystemType
+  gte: SystemType
+  iLike: SystemType
+  in: [SystemType!]
+  is: Boolean
+  isNot: Boolean
+  like: SystemType
+  lt: SystemType
+  lte: SystemType
+  neq: SystemType
+  notILike: SystemType
+  notIn: [SystemType!]
+  notLike: SystemType
+}
+
+input UpdateDestinationInterfaceInput {
+  "destination_system 식별자"
+  destinationSystemId: Int
+  "http header 정보"
+  header: String
+  "destination interface 명"
+  interfaceName: String
+  "메모"
+  memo: String
+  "http method 정보"
+  method: String
+  "parameter 혹은 parsing 을 위해 사용할 옵셔널한 데이터, JSON 형태, ex) {boardId:2423746910}"
+  optionData: String
+  "데이터 전송 정보"
+  payload: String
+  "Exmporter Client 의 response 에 대한 실 데이터 매핑키, null 일때는 원본 그대로 획득, ex) data.boards[0].items"
+  resultKey: String
+  "destination type db 경우 사용 쿼리"
+  sql: String
+  "uri 주소"
+  uri: String
+}
+
+input UpdateDestinationMapperInput {
+  "destination_interface 식별자"
+  destinationInterfaceId: Int
+  "destination mapper 명"
+  mapperName: String
+  "비고"
+  memo: String
+  "순서"
+  sort: Int
+  "source_interface 식별자"
+  sourceInterfaceId: Int
+}
+
+input UpdateDestinationSystemInput {
+  "destination host"
+  host: String
+  "비고"
+  memo: String
+  "destination port"
+  port: String
+  "destination_system 명"
+  systemName: String
+  "destination 연동 타입, api, db, socket"
+  type: SystemType
+}
+
+input UpdateOneDestinationInterfaceInput {
+  "The id of the record to update"
+  id: ID!
+  "The update to apply."
+  update: UpdateDestinationInterfaceInput!
+}
+
+input UpdateOneDestinationMapperInput {
+  "The id of the record to update"
+  id: ID!
+  "The update to apply."
+  update: UpdateDestinationMapperInput!
+}
+
+input UpdateOneDestinationSystemInput {
+  "The id of the record to update"
+  id: ID!
+  "The update to apply."
+  update: UpdateDestinationSystemInput!
+}
+
+input UpdateOneScheduleTaskInput {
+  "The id of the record to update"
+  id: ID!
+  "The update to apply."
+  update: UpdateScheduleTaskInput!
+}
+
+input UpdateOneSourceInterfaceInput {
+  "The id of the record to update"
+  id: ID!
+  "The update to apply."
+  update: UpdateSourceInterfaceInput!
+}
+
+input UpdateOneSourceSystemInput {
+  "The id of the record to update"
+  id: ID!
+  "The update to apply."
+  update: UpdateSourceSystemInput!
+}
+
+input UpdateOneUserInput {
+  "The id of the record to update"
+  id: ID!
+  "The update to apply."
+  update: UpdateUserInput!
+}
+
+input UpdateScheduleTaskInput {
+  "배치주기, CRON (* * * * * *) 형태 사용, use year"
+  batchCronSchedule: String
+  "Request Payload, 작업시 필요한 데이터"
+  requestPayload: String
+  "source_interface 참조키"
+  sourceInterfaceId: Int
+  "작업명"
+  taskName: String
+}
+
+input UpdateSourceInterfaceInput {
+  "http header 정보"
+  header: String
+  "source_interface 명"
+  interfaceName: String
+  "비고"
+  memo: String
+  "http method 정보"
+  method: String
+  "payload 혹은 header 의 customizing 을 위한 옵셔녈 데이터, JSON"
+  optionData: String
+  "http 데이터 전송 정보"
+  payload: String
+  "dynamoDB 의 pk 에 사용할 컬럼의 키워드 리스트. 입력순으로 우선순위를 갖는다. 구분자는 콤마(,)"
+  pkItems: String
+  "importer 의 response 에 대한 실사용 데이터 매핑키. dictionary 에 대한 nested depth Key 값임. ex) data.boards[0].items"
+  resultKey: String
+  "source_system 식별자"
+  sourceSystemId: Int
+  "source type db 경우 쿼리"
+  sql: String
+  "uri 주소"
+  uri: String
+}
+
+input UpdateSourceSystemInput {
+  "URL or IP or DOMAIN"
+  host: String
+  "비고"
+  memo: String
+  "port"
+  port: String
+  "source_system 명"
+  systemName: String
+  "source 연동 타입, api, db, socket"
+  type: SystemType
+}
+
+input UpdateUserInput {
+  "이메일"
+  email: String
+  "이름"
+  name: String
+  "권한"
+  role: Role = USER
+}
+
+input UserAggregateFilter {
+  and: [UserAggregateFilter!]
+  createdAt: DateFieldComparison
+  createdUserId: IntFieldComparison
+  deleted: UserDeletedFilterComparison
+  email: StringFieldComparison
+  id: IDFilterComparison
+  name: StringFieldComparison
+  or: [UserAggregateFilter!]
+  role: RoleFilterComparison
+  updatedAt: DateFieldComparison
+  updatedUserId: IntFieldComparison
+}
+
+input UserDeleteFilter {
+  and: [UserDeleteFilter!]
+  createdAt: DateFieldComparison
+  createdUserId: IntFieldComparison
+  deleted: UserDeletedFilterComparison
+  email: StringFieldComparison
+  id: IDFilterComparison
+  name: StringFieldComparison
+  or: [UserDeleteFilter!]
+  role: RoleFilterComparison
+  updatedAt: DateFieldComparison
+  updatedUserId: IntFieldComparison
+}
+
+input UserDeletedFilterComparison {
+  in: [Boolean!]
+}
+
+input UserFilter {
+  and: [UserFilter!]
+  createdAt: DateFieldComparison
+  createdUserId: IntFieldComparison
+  deleted: UserDeletedFilterComparison
+  email: StringFieldComparison
+  id: IDFilterComparison
+  name: StringFieldComparison
+  or: [UserFilter!]
+  role: RoleFilterComparison
+  updatedAt: DateFieldComparison
+  updatedUserId: IntFieldComparison
+}
+
+input UserInput {
+  "이메일"
+  email: String!
+  "이름"
+  name: String!
+  "권한"
+  role: Role = USER
+}
+
+input UserSort {
+  direction: SortDirection!
+  field: UserSortFields!
+  nulls: SortNulls
+}

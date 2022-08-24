@@ -1,0 +1,10 @@
+select:invalid {
+  color: #A6ADBA;
+}
+
+select option[value=""][disabled] {
+  display: none;
+}
+option {
+  color: white!important;
+}
